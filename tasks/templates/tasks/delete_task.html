@@ -1,0 +1,21 @@
+{% extends 'tasks/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="delete">
+    <div class="delete-content">
+        <div class="delete-content__text">
+            <h2>Do you really want to delete</h2>
+            <p>"{{task}}"</p>
+        </div>
+        <div class="delete-content__options">
+            <a class="button-cancel" href="{% url 'tasks' %}">Cancel</a>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input class="button-confirm" type="submit" value="Confirm">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

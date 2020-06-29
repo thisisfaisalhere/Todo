@@ -8,7 +8,7 @@
 .overlay {
   height: 100%;
   width: 100vw;
-  background: #1f1e1e63;
+  background: #1f1e1eab;
   z-index: 50;
   display: none;
   position: fixed;

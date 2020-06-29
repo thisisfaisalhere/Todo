@@ -35,6 +35,16 @@ def editTask(request, pk):
     context = {'form': form}
     return render(request, 'tasks/edit_task.html', context)
 
+def deleteTask(request, pk):
+    task = Task.objects.get(id=pk)
+
+    if request.method=='POST':
+        task.delete()
+        return redirect('tasks')
+
+    context = {'task': task}
+    return render(request, 'tasks/delete_task.html', context)
+
 def notes(request):
     context = {}
     return render(request, 'tasks/notes.html', context)

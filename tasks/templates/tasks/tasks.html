@@ -1,19 +1,6 @@
 {% extends 'tasks/main.html' %}
 {% load static %}
 {% block content %}
-
-    <div class="modal">
-        <div class="modal-content">
-            <h2>Do you really want to delete</h2>
-            <p>"{{item}}"</p>
-        </div>
-        <div class="modal-options">
-            <button class="button-cancel">Cancel</button>
-            <button class="button-confirm">Delete</button>
-        </div>
-    </div>
-
-
     <div class="tasks" id="tasks">
         <div class="task-content">
             <div class="task-content__input">
@@ -26,13 +13,19 @@
             <div class="task-content__outputs">
                 {% for task in tasks %}
                     <div class="task-content__output">
-                        <div class="task-text">
-                            <p>{{task}}</p>
-                        </div>
+                        {% if task.completed == True %}
+                            <div class="task-text task-completed">
+                                <p>{{task}}</p>
+                            </div>
+                        {% else %}
+                            <div class="task-text">
+                                <p>{{task}}</p>
+                            </div>
+                        {% endif %}
                         <div class="buttons">
-                            <a href="#" class="completed-button"><img src="{% static './assets/check.png' %}" alt="completed-button"></a>
+                            <!-- <a href="#" class="completed-button"><img src="{% static './assets/check.png' %}" alt="completed-button"></a> -->
                             <a href="{% url 'edit_task' task.id %}" class="edit-button"><img src="{% static './assets/edit.png' %}" alt="completed-button"></a>
-                            <a href="#" class="delete-button"><img src="{% static './assets/delete.png' %}" alt="completed-button"></a>
+                            <a href="{% url 'delete_task' task.id %}" class="delete-button"><img src="{% static './assets/delete.png' %}" alt="completed-button"></a>
                         </div>
                     </div>
                 {% endfor%}

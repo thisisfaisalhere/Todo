@@ -5,93 +5,6 @@
           box-sizing: border-box;
 }
 
-.modal {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #bbb195;
-  font-family: 'Pangolin', cursive;
-  border-radius: 1rem;
-  -webkit-box-shadow: 0.5rem 0.5rem 1rem grey;
-          box-shadow: 0.5rem 0.5rem 1rem grey;
-  z-index: 200;
-  height: auto;
-  width: auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  padding: 5rem;
-}
-
-.modal .modal-content {
-  color: #0a3441;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.modal .modal-content h2, .modal .modal-content p {
-  margin: 0.5rem;
-}
-
-.modal .modal-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal .modal-options .button-cancel,
-.modal .modal-options .button-confirm {
-  background: #7e6454;
-  border: none;
-  height: 2rem;
-  width: 4rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #f1e3bc;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal .modal-options .button-confirm {
-  background: #d26237;
-}
-
-.modal .modal-options .button-confirm:hover,
-.modal .modal-options .button-cancel:hover {
-  height: 2.5rem;
-  width: 4.5rem;
-  font-size: 1.1rem;
-  color: #bbb195;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.modal .modal-options .button-confirm:focus,
-.modal .modal-options .button-cancel:focus {
-  outline: none;
-}
-
 .tasks {
   background-image: linear-gradient(20deg, #0a3441, #0a5751);
   font-family: 'Pangolin', cursive;
@@ -270,120 +183,8 @@
   opacity: 0.5;
 }
 
-.tasks .task-content .task-content__outputs .task-completed .task-text p {
+.tasks .task-content .task-content__outputs .task-completed p {
   text-decoration: line-through;
-}
-
-@media (max-width: 32rem) {
-  .tasks .task-content {
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0.5rem;
-  }
-  .tasks .task-content .task-content__input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-  .tasks .task-content .task-content__input input,
-  .tasks .task-content .task-content__input .form-submit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 3rem;
-    width: 18rem;
-    padding: 0.5rem;
-    font-size: 0.8rem;
-  }
-  .tasks .task-content .task-content__input input {
-    margin: 5rem 0 0 0;
-  }
-  .tasks .task-content .task-content__input .form-submit {
-    padding: 0;
-    width: 100%;
-    height: 2rem;
-    text-align: center;
-    margin: 0.5rem 0 0 0;
-  }
-  .tasks .task-content .task-content__outputs {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0.5rem;
-    margin: 0 0 0.5rem 0;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output .task-text {
-    width: 100%;
-    overflow: auto;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output .task-text p {
-    text-align: center;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .completed-button,
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .edit-button,
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .delete-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.2rem;
-    padding: 0.2rem;
-  }
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .completed-button img,
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .edit-button img,
-  .tasks .task-content .task-content__outputs .task-content__output .buttons .delete-button img {
-    height: 1.5rem;
-  }
 }
 
 .edit-task {
@@ -562,7 +363,218 @@
   outline: none;
 }
 
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: linear-gradient(20deg, #0a3441, #0a5751);
+  height: 100vh;
+}
+
+.delete .delete-content {
+  font-family: 'Pangolin', cursive;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem grey;
+          box-shadow: 0.5rem 0.5rem 1rem grey;
+  background-color: #bbb195;
+  z-index: 200;
+  height: auto;
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5rem;
+}
+
+.delete .delete-content .delete-content__text {
+  color: #0a3441;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.delete .delete-content .delete-content__text h2, .delete .delete-content .delete-content__text p {
+  margin: 0.5rem;
+}
+
+.delete .delete-content .delete-content__text h2 {
+  font-size: 1.8rem;
+}
+
+.delete .delete-content .delete-content__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delete .delete-content .delete-content__options .button-cancel,
+.delete .delete-content .delete-content__options .button-confirm {
+  background: #7e6454;
+  border: none;
+  height: 2rem;
+  width: 5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #f1e3bc;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delete .delete-content .delete-content__options .button-confirm {
+  background: #d26237;
+}
+
+.delete .delete-content .delete-content__options .button-confirm:hover,
+.delete .delete-content .delete-content__options .button-cancel:hover {
+  width: 6rem;
+  font-size: 1.1rem;
+  color: #bbb195;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.delete .delete-content .delete-content__options .button-confirm:focus,
+.delete .delete-content .delete-content__options .button-cancel:focus {
+  outline: none;
+}
+
 @media (max-width: 32rem) {
+  .tasks .task-content {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5rem;
+  }
+  .tasks .task-content .task-content__input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .tasks .task-content .task-content__input input,
+  .tasks .task-content .task-content__input .form-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 3rem;
+    width: 18rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .tasks .task-content .task-content__input input {
+    margin: 5rem 0 0 0;
+  }
+  .tasks .task-content .task-content__input .form-submit {
+    padding: 0;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+  }
+  .tasks .task-content .task-content__outputs {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0.5rem;
+    margin: 0 0 0.5rem 0;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output .task-text {
+    width: 100%;
+    overflow: auto;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output .task-text p {
+    text-align: center;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .completed-button,
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .edit-button,
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+  }
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .completed-button img,
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .edit-button img,
+  .tasks .task-content .task-content__outputs .task-content__output .buttons .delete-button img {
+    height: 1.5rem;
+  }
   .edit-task .edit-task__content .edit-heading {
     font-size: 1.5rem;
     margin-bottom: 0;
@@ -576,6 +588,12 @@
   }
   .edit-task .edit-task__content .edit-task__input .form .form-submit {
     width: 14rem;
+  }
+  .delete .delete-content {
+    width: 90%;
+  }
+  .delete .delete-content .delete-content__text h1 {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=tasks.css.map */
