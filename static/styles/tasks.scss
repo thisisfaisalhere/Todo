@@ -1,0 +1,426 @@
+@import "variables";
+
+.modal {
+    display: none;
+    flex-direction: column;
+    background: $text-color__dark;
+    font-family: 'Pangolin', cursive;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem grey;
+    z-index: 200;
+    height: auto;
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem;
+
+    .modal-content {
+        color: $background-color__primary;
+        font-size: 1rem;
+        text-align: center;
+
+        h2, p {
+            margin: 0.5rem;
+        }
+    }
+
+    .modal-options {
+        @include center();
+
+        .button-cancel,
+        .button-confirm {
+            background: #7e6454;
+            border: none;
+            height: 2rem;
+            width: 4rem;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            color: $text-color__light;
+            text-decoration: none;
+            @include center();
+        }
+
+        .button-confirm {
+            background: #d26237;
+        }
+
+        .button-confirm:hover,
+        .button-cancel:hover {
+            height: 2.5rem;
+            width: 4.5rem;
+            font-size: 1.1rem;
+            color: $text-color__dark;
+            transition: all 0.5s ease;
+        }
+        
+        .button-confirm:focus,
+        .button-cancel:focus {
+            outline: none;
+        }
+    }
+}
+
+.tasks {
+    background-image: linear-gradient(20deg, #0a3441, #0a5751);
+    font-family: 'Pangolin', cursive;
+    @include center();
+
+    .task-content {
+        min-height: 100vh;
+        @include center();
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 5rem;
+        
+        .task-content__input { 
+
+            input,
+            .form-submit {
+                height: auto;
+                width: 30rem;
+                border-radius: 1rem;
+                padding: 1rem;
+                font-size: 1rem;  
+                background: $form-input__background;
+                border:none;
+            }
+
+            input {
+                margin: 3rem 0 0 0;
+            }
+    
+            input:focus {
+                background: $text-color__light;
+                transition: background 0.5s ease;
+            }
+    
+            .form-submit {
+                @include center();
+                font-size: 1rem;
+                color: $text-color__light;
+                padding: 0;
+                width: 25rem;
+                height: 2rem;
+                text-align: center;
+                margin: 0.5rem 0 0 2.5rem;
+                cursor: pointer;
+                background: transparent;
+                border: 2px solid $text-color__light;
+            }
+    
+            .form-submit:hover {
+                background: $text-color__light;
+                color: $background-color__primary;
+                transition: all 0.5s ease;
+            }
+    
+            .form-submit:focus {
+                outline: none;
+            }
+        }
+        .task-content__outputs {
+            height: auto;
+            width: 30rem;
+            background: $text-color__light;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+
+            .task-content__output {
+                background: $background-color__primary;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+                margin: 0 0 0.5rem 0;
+                @include center();
+
+                .task-text {
+                    width: 70%;
+                    p {
+                        color: $text-color__light;
+                    }
+                }
+
+                .buttons {
+                    @include center();
+                    
+                    .completed-button,
+                    .edit-button,
+                    .delete-button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 0.2rem;
+                        padding: 0.2rem;
+
+                        img {
+                            height: 2rem;
+                        }
+                    }
+
+                    .completed-button:hover {
+                        background: #e9c24a;
+                        transition: all 0.5s ease;
+                    }
+
+                    .edit-button:hover {
+                        background: $text-color__dark;
+                        transition: all 0.5s ease;
+                    }
+
+                    .delete-button:hover {
+                        background: #d26237;
+                        transition: all 0.5s ease;
+                    }
+
+                    .completed-button:focus,
+                    .edit-button:focus,
+                    .delete-button:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .task-completed {
+                opacity: 0.5;
+
+                .task-text{
+                    p {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:32rem) {
+
+    .tasks {
+        .task-content {
+            width: 90%;
+            @include center();
+            flex-direction: column;
+            margin: 0.5rem;
+            
+            .task-content__input {    
+                @include center();
+                width: 100%;
+                input,
+                .form-submit {
+                    @include center();
+                    height: 3rem;
+                    width: 18rem;
+                    padding: 0.5rem;
+                    font-size: 0.8rem;
+                }
+
+                input {
+                    margin: 5rem 0 0 0;
+                }
+        
+                .form-submit {
+                    padding: 0;
+                    width: 100%;
+                    height: 2rem;
+                    text-align: center;
+                    margin: 0.5rem 0 0 0;
+                }
+            }
+            .task-content__outputs {
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 1rem;
+    
+                .task-content__output {
+                    @include center();
+                    flex-direction: column;
+                    padding: 0.5rem;
+                    margin: 0 0 0.5rem 0;
+    
+                    .task-text {
+                        width: 100%;
+                        overflow: auto;
+                        p {
+                            text-align: center;
+                        }
+                    }
+    
+                    .buttons {
+                        @include center();
+                        .completed-button,
+                        .edit-button,
+                        .delete-button {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 0.2rem;
+                            padding: 0.2rem;
+    
+                            img {
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.edit-task {
+    background-image: linear-gradient(20deg, #0a3441, #0a5751);
+    @include center();
+
+    .edit-task__content {
+        @include center();
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-height: 100vh;
+
+        .edit-heading {
+            font-family: 'Pangolin', cursive;
+            margin: 3rem 0 1rem 0;
+            font-size: 2rem;
+            color: $text-color__light;
+            text-align: center;
+        }
+
+        .edit-task__input {
+            height: auto;
+            width: 40rem;
+            border-radius: 1rem;
+            padding: 5rem;
+            
+            .form {
+                @include center();
+                flex-direction: column;
+
+                .form-input__text {
+                    #id_title {
+                        font-family: 'Pangolin', cursive;
+                        height: auto;
+                        width: 30rem;
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        font-size: 1rem;  
+                        background: $form-input__background;
+                        border:none;
+                        margin: 0.5rem;
+                        
+                    }
+
+                    #id_title:focus {
+                        background: $text-color__light;
+                        transition: background 0.5s ease;
+                    }
+                }
+
+                .form-input__checkbox {
+                    color: $text-color__light;
+                    font-size: 1rem;
+                    margin: 0.5rem;
+                    @include center();
+
+                    span {
+                        font-family: 'Pangolin', cursive;
+                        padding: 0.5rem;
+                    }
+
+                    #id_completed {
+                        appearance: none;
+                        margin: 0;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        background-color: #fafafa;
+                        border: 1px solid #cacece;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+                        padding: 9px;
+                        border-radius: 3px;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                    }
+
+                    #id_completed:active, #id_completed:checked:active {
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+                    }
+                    
+                    #id_completed:checked {
+                        background-color: #e9ecee;
+                        border: 1px solid #adb8c0;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+                        color: #99a1a7;
+                    }
+
+                    #id_completed:checked:after {
+                        content: '\2714';
+                        font-size: 14px;
+                        position: absolute;
+                        top: 0px;
+                        left: 3px;
+                        color: #99a1a7;
+                    }
+                }
+
+                .form-submit {
+                    font-family: 'Pangolin', cursive;
+                    @include center();
+                    font-size: 1rem;
+                    color: $text-color__light;
+                    padding: 0;
+                    width: 25rem;
+                    height: 2rem;
+                    text-align: center;
+                    cursor: pointer;
+                    background: transparent;
+                    border: 2px solid $text-color__light;
+                    border-radius: 1rem;
+                }
+        
+                .form-submit:hover {
+                    background: $text-color__light;
+                    color: $background-color__primary;
+                    transition: all 0.5s ease;
+                }
+        
+                .form-submit:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 32rem) {
+    .edit-task {
+        .edit-task__content {
+            .edit-heading {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+
+            .edit-task__input {
+                width: auto;
+                padding: 2rem;
+
+                .form {
+                    .form-input__text {
+                        #id_title {
+                            width: auto;
+                        }
+                    }
+
+                    .form-submit {
+                        width: 14rem;
+                    }
+                }
+            }
+        }
+    }
+}

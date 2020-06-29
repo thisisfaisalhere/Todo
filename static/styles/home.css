@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home .landing {
+  background-image: linear-gradient(320deg, #0a3441, #0a5751);
+  overflow: auto;
+}
+
+.home .landing .landing-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100vh;
+}
+
+.home .landing .landing-content .landing-text {
+  width: 21rem;
+}
+
+.home .landing .landing-content .landing-text .text-heading {
+  font-family: 'Freckle Face', cursive;
+  color: #f1e3bc;
+  font-size: 2.5rem;
+}
+
+.home .landing .landing-content .landing-text .text-description {
+  font-family: 'Pangolin', cursive;
+  color: #f1e3bc;
+  font-size: 1rem;
+}
+
+.home .landing .landing-content .text-align__right {
+  text-align: right;
+}
+
+.home .landing .landing-content .button {
+  background: none;
+  font-family: 'Pangolin', cursive;
+  color: #f1e3bc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #f1e3bc;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.home .landing .landing-content .button-align__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home .landing .landing-content .button:hover {
+  background: #bbb195;
+  color: #0a3441;
+  font-size: 1.1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.home .landing .landing-content .button:focus {
+  outline: none;
+}
+
+.home .landing .landing-content .landing-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #bbb195;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+}
+
+.home .landing .landing-content .landing-img .img {
+  height: 25rem;
+  width: auto;
+}
+
+@media (max-width: 60rem) {
+  .home .landing .landing-content .landing-text .text-heading {
+    font-family: 'Freckle Face', cursive;
+    color: #f1e3bc;
+    font-size: 2rem;
+  }
+  .home .landing .landing-content .landing-text .text-description {
+    font-family: 'Pangolin', cursive;
+    color: #f1e3bc;
+    font-size: 1rem;
+  }
+  .home .landing .landing-content .landing-img {
+    height: 20rem;
+    width: 20rem;
+  }
+  .home .landing .landing-content .landing-img .img {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 45rem) {
+  .home .landing .landing-content .landing-text .text-heading {
+    font-size: 1.5rem;
+  }
+  .home .landing .landing-content .landing-text .text-description {
+    font-size: 1rem;
+  }
+  .home .landing .landing-content .button {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.1rem;
+  }
+  .home .landing .landing-content .button:hover {
+    font-size: 1rem;
+  }
+  .home .landing .landing-content .landing-img {
+    height: 15rem;
+    width: 15rem;
+  }
+  .home .landing .landing-content .landing-img .img {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .home .landing .landing-content {
+    margin: 0.5rem;
+    padding: 0.5;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .landing .landing-content .landing-text {
+    width: 90%;
+  }
+  .home .landing .landing-content .landing-text .text-heading {
+    font-size: 1.5rem;
+  }
+  .home .landing .landing-content .landing-text .text-description {
+    font-size: 1rem;
+  }
+  .home .landing .landing-content .button {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.1rem;
+  }
+  .home .landing .landing-content .button:hover {
+    font-size: 1rem;
+  }
+  .home .landing .landing-content .landing-img {
+    height: 15rem;
+    width: 15rem;
+  }
+  .home .landing .landing-content .landing-img .img {
+    height: 15rem;
+  }
+  .home .landing .landing-content .landing-img .img-2 {
+    height: 11rem;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=home.css.map */

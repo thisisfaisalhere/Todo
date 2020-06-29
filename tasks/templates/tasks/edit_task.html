@@ -1,0 +1,22 @@
+{% extends 'tasks/main.html' %}
+{% load static %}
+{% block content %}
+<div class="edit-task">
+    <div class="edit-task__content">
+        <h2 class="edit-heading">Edit your Task here...</h2>
+        <div class="edit-task__input">
+            <form method="POST" action="" class="form">
+                {% csrf_token %}
+                <div class="form-input__text">
+                    {{form.title}}
+                </div>
+                <div class="form-input__checkbox">
+                    <span>Completed?</span>
+                    {{form.completed}}
+                </div>
+                <input class="form-submit" type="submit" value="Save Task">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

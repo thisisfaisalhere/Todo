@@ -1,0 +1,48 @@
+{% extends 'tasks/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="home" id="home">
+        <div class="landing">
+            <div class="landing-content">
+                <div class="landing-text">
+                    <h2 class="text-heading">Tasks For Doers</h2>
+                    <p class="text-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam temporibus est accusamus quod? Magnam, minus. Rem nisi minus perferendis esse, asperiores id sequi sed.</p>
+                    <div class="button-container">
+                        <a href="{% url 'tasks' %}" class="button">Go to Tasks</a>
+                    </div>
+                </div>
+                <div class="landing-img">
+                    <img class="img" src="{% static './assets/tasks.png' %}" alt="tasks">
+                </div>
+            </div>
+        </div>
+        <div class="landing">
+            <div class="landing-content">
+                <div class="landing-img">
+                    <img class="img img-2" src="{% static './assets/notes.png' %}" alt="notes">
+                </div>
+                <div class="landing-text text-align__right">
+                    <h2 class="text-heading">Notes For Thinkers</h2>
+                    <p class="text-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam temporibus est accusamus quod? Magnam, minus. Rem nisi minus perferendis esse, asperiores id sequi sed.</p>
+                    <div class="button-container button-align__right">
+                        <a href="{% url 'notes' %}" class="button">Go to Tasks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="landing">
+            <div class="landing-content">
+                <div class="landing-text">
+                    <h2 class="text-heading">Privacy For All</h2>
+                    <p class="text-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam temporibus est accusamus quod? Magnam, minus. Rem nisi minus perferendis esse, asperiores id sequi sed.</p>
+                    <div class="button-container">
+                        <a href="{% url 'accounts' %}" class="button">Go to Tasks</a>
+                    </div>
+                </div>
+                <div class="landing-img">
+                    <img class="img" src="{% static './assets/secure.png' %}" alt="Accounts">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//colors
+$text-color__light: #f1e3bc;
+$text-color__dark: #bbb195;
+$overlay-color: #1f1e1eab;
+$background-color__primary: #0a3441;
+$form-input__background: #cec3a6;
+
+@mixin link() {
+    text-decoration: none;
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mainfont() {
+    font-family: 'Freckle Face', cursive;
+    color: $text-color__light;
+}
+
+@mixin secondaryfont() {
+    font-family: 'Pangolin', cursive;
+    color: $text-color__light;
+}
