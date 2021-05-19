@@ -1,0 +1,50 @@
+.contribute-content {
+  scroll-behavior: smooth;
+
+  .landing {
+    height: 100vh;
+    background-image: url("../../../assets/contibute.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    .contribute-text {
+      width: 50%;
+      text-align: center;
+      margin: 1rem;
+
+      .contribute-text__header,
+      .contribute-text__para {
+        color: white;
+      }
+
+      .contribute-text__header {
+        font-size: 3rem;
+      }
+
+      .contribute-text__para {
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.315);
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .contribute-button {
+      height: 3rem;
+      width: 12rem;
+      font-size: 1.5rem;
+    }
+  }
+  .contribution {
+    height: 100vh;
+  }
+}
