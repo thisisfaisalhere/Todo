@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App.component";
+import Navbar from "./Navbar.component";
 
 test("renders learn react link", () => {
-  render(<App />);
+  render(<Navbar />);
 
-  // Todo: write tests
+  // Todo: write test
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });

@@ -2,18 +2,13 @@
   "name": "app",
   "version": "0.0.1",
   "private": true,
-  "description": "dyesee is a ML and AI based leather dye prediction app",
+  "description": "App description",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thisisfaisalhere/dyesee.git"
+    "url": "git+https://github.com/thisisfaisalhere/"
   },
-  "keywords": [
-    "dye",
-    "leather",
-    "AI",
-    "ML"
-  ],
-  "author": "virusX",
+  "keywords": [],
+  "author": "",
   "license": "Copyright retained",
   "devDependencies": {},
   "dependencies": {

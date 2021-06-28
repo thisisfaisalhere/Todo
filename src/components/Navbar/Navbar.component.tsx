@@ -11,7 +11,7 @@ const Navbar = () => {
     <Header className="navbar">
       <div className="brand" onClick={() => history.replace("/")}>
         <div className="logo" />
-        <Typography className="brand-name">dyeSee</Typography>
+        <Typography className="brand-name">BrandName</Typography>
       </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">

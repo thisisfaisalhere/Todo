@@ -11,10 +11,10 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
 
     # api docs
-    path('api/docs/', include_docs_urls(title='Todo API')),
+    path('api/docs/', include_docs_urls(title='... API')),
     path('api/schema/', get_schema_view(
-        title="Todo API",
-        description="API for the Todo",
+        title="... API",
+        description="API for the ...",
         version="1.0.0"
     ), name='openapi-schema'),
 
