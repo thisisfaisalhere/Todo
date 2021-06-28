@@ -18,7 +18,7 @@ urlpatterns = [
         version="1.0.0"
     ), name='openapi-schema'),
 
-    path('api/users/', include('users.urls')),
+    path('api/user/', include('users.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

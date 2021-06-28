@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/contribute">Contribute</Link>
+          <Link to="/someLink">Some Page</Link>
         </Menu.Item>
       </Menu>
     </Header>
