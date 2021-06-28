@@ -1,7 +1,7 @@
+import uuid
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-# from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -42,6 +42,7 @@ class CustomAccountManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
 
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(_('email address'), unique=True)
     name = models.CharField(max_length=150)
     start_date = models.DateTimeField(default=timezone.now)

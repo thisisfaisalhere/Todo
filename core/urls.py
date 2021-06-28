@@ -11,14 +11,16 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
 
     # api docs
-    path('api/docs/', include_docs_urls(title='... API')),
+    path('api/docs/', include_docs_urls(title='MyTodo API')),
     path('api/schema/', get_schema_view(
-        title="... API",
-        description="API for the ...",
+        title="MyTodo API",
+        description="API for the MyTodo",
         version="1.0.0"
     ), name='openapi-schema'),
 
+    # api
     path('api/user/', include('users.urls')),
+    path('api/tasks/', include('tasks.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
