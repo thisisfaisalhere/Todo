@@ -51,7 +51,6 @@ class LoginSerializer(serializers.ModelSerializer):
 
     tokens = serializers.SerializerMethodField()
     name = serializers.CharField(required=False, read_only=True)
-    user_type = serializers.CharField(required=False, read_only=True)
     msg = serializers.CharField(required=False, read_only=True)
 
     def get_tokens(self, obj):
@@ -64,7 +63,7 @@ class LoginSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['tokens', 'name', 'msg']
+        fields = ['tokens', 'name', 'msg', 'password', 'email']
 
     def validate(self, attrs):
         email = attrs.get('email', '')
