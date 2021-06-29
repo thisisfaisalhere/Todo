@@ -20,7 +20,7 @@ urlpatterns = [
 
     # api
     path('api/user/', include('users.urls')),
-    path('api/tasks/', include('tasks.urls')),
+    path('api/', include('tasks.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

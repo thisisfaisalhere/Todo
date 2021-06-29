@@ -8,6 +8,7 @@ class UserTask(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey("users.User", verbose_name=_("User"), on_delete=models.CASCADE)
     task = models.CharField(_("Task"), max_length=500)
+    completed = models.BooleanField(_("Completed"), default=False)
     date = models.DateField(_("Date Added"), auto_now_add=True)
 
     class Meta:
