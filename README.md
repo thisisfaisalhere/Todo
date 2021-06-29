@@ -4,12 +4,12 @@
 
 ## Getting on-board
 
-### requirements for the project
+### Requirements for the project
 
 1. Python >=v3.8.5
 2. postgresql
 
-### steps to init project
+### Steps to init project
 
 1. create and activate virtualenv `virtualenv env && source env/bin/activate`
 2. run `pip3 install -r requirements.txt`
@@ -18,7 +18,7 @@
 5. run `python3 manage.py makemigrations`
 6. run `python3 manage.py migrate`
 
-### how to run project on localhost
+### How to run project on localhost
 
 1. run `python3 manage.py runserver` to start django server
 2. run `python3 manage.py makemigrations` to make migrations
