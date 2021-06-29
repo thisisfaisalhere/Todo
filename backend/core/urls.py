@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.schemas import get_schema_view
 from rest_framework.documentation import include_docs_urls
+from .views import root
 
 urlpatterns = [
     # admin
@@ -20,7 +21,10 @@ urlpatterns = [
 
     # api
     path('api/user/', include('users.urls')),
-    path('api/', include('tasks.urls')),
+    path('api/tasks/', include('tasks.urls')),
+
+    # test route
+    path('', view=root.as_view(), name='root-path')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
